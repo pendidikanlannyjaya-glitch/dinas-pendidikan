@@ -220,6 +220,8 @@ img {
     transition: var(--transition);
     z-index: 1001;
     border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
 }
 
 .dropdown:hover .dropdown-menu {
