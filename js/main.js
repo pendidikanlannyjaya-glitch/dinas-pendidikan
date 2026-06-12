@@ -10,8 +10,19 @@ navToggle.addEventListener('click', () => {
 // Close nav when clicking a link
 document.querySelectorAll('.nav a').forEach(link => {
     link.addEventListener('click', () => {
-        mainNav.classList.remove('active');
-        navToggle.classList.remove('active');
+        if (!link.classList.contains('dropdown-toggle')) {
+            mainNav.classList.remove('active');
+            navToggle.classList.remove('active');
+        }
+    });
+});
+
+// ===== Dropdown Toggle (Mobile) =====
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parent = toggle.parentElement;
+        parent.classList.toggle('active');
     });
 });
 
