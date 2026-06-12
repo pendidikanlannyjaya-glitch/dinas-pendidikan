@@ -153,6 +153,11 @@ img {
 .nav ul {
     display: flex;
     gap: 30px;
+    align-items: center;
+}
+
+.nav > ul > li {
+    position: relative;
 }
 
 .nav a {
@@ -160,6 +165,7 @@ img {
     color: var(--text);
     transition: var(--transition);
     position: relative;
+    white-space: nowrap;
 }
 
 .nav a:hover,
@@ -184,19 +190,26 @@ img {
 }
 
 .dropdown-toggle {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 4px;
+    cursor: pointer;
 }
 
 .dropdown-arrow {
     font-size: 0.7rem;
+    transition: var(--transition);
+}
+
+.dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
 }
 
 .dropdown-menu {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
     background: #fff;
     min-width: 180px;
     box-shadow: var(--shadow-lg);
@@ -204,15 +217,15 @@ img {
     padding: 8px 0;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(10px);
     transition: var(--transition);
     z-index: 1001;
+    border: 1px solid var(--border);
 }
 
 .dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
-    transform: translateY(5px);
+    transform: translateX(-50%) translateY(0);
 }
 
 .dropdown-menu li {
@@ -225,6 +238,7 @@ img {
     font-size: 0.9rem;
     color: var(--text);
     transition: var(--transition);
+    white-space: nowrap;
 }
 
 .dropdown-menu a:hover {
@@ -689,10 +703,12 @@ img {
     .dropdown-menu {
         position: static;
         box-shadow: none;
+        border: none;
         opacity: 1;
         visibility: visible;
         transform: none;
         padding-left: 15px;
+        min-width: auto;
         display: none;
     }
 
