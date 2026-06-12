@@ -746,6 +746,17 @@ img {
     object-fit: contain;
 }
 
+.layanan-icon-wrap.no-bg {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.layanan-card:hover .layanan-icon-wrap.no-bg {
+    background: none;
+    transform: scale(1.05);
+}
+
 .layanan-card h3 {
     font-size: 1.05rem;
     color: var(--text);
