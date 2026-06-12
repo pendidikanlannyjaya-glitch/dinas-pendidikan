@@ -133,8 +133,10 @@ img {
     gap: 12px;
 }
 
-.logo-icon {
-    font-size: 2rem;
+.logo-img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
 }
 
 .logo-text h1 {
