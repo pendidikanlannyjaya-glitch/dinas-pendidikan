@@ -458,6 +458,46 @@ img {
     background: var(--bg);
 }
 
+/* Tentang Kami */
+.tentang-kami {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 60px;
+    padding: 40px;
+    background: var(--bg-light);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+}
+
+.tentang-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 16px;
+}
+
+.tentang-content p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.tentang-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: var(--radius-lg);
+}
+
+.tentang-placeholder {
+    font-size: 5rem;
+    opacity: 0.9;
+}
+
 .profil-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -534,6 +574,107 @@ img {
 .profil-card ul li {
     margin-bottom: 10px;
     line-height: 1.6;
+}
+
+/* Profil Pejabat */
+.pejabat-section {
+    margin-top: 70px;
+}
+
+.pejabat-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 36px;
+}
+
+.pejabat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.pejabat-card {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 20px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.pejabat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.pejabat-card.pejabat-utama {
+    grid-column: 1 / -1;
+    max-width: 300px;
+    margin: 0 auto 10px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff;
+    border: none;
+}
+
+.pejabat-card.pejabat-utama h4 {
+    color: #fff;
+}
+
+.pejabat-card.pejabat-utama .pejabat-nama {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.pejabat-card.pejabat-utama .pejabat-nip {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.pejabat-photo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: rgba(37, 99, 235, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.pejabat-card.pejabat-utama .pejabat-photo {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.pejabat-placeholder {
+    font-size: 2rem;
+}
+
+.pejabat-card.pejabat-utama .pejabat-placeholder {
+    font-size: 2.5rem;
+}
+
+.pejabat-info h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.pejabat-nama {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.pejabat-nip {
+    font-size: 0.8rem;
+    color: var(--text-light);
 }
 
 /* ===== Layanan ===== */
@@ -945,6 +1086,10 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .pejabat-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1017,6 +1162,19 @@ img {
     .layanan-grid,
     .berita-grid {
         grid-template-columns: 1fr;
+    }
+
+    .tentang-kami {
+        grid-template-columns: 1fr;
+        padding: 28px;
+    }
+
+    .tentang-image {
+        height: 180px;
+    }
+
+    .pejabat-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .kontak-grid {
