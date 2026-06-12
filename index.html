@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
@@ -52,15 +52,26 @@
 
     <!-- Hero Section -->
     <section class="hero" id="beranda">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
-                <h2>Membangun Generasi Cerdas dan Berkarakter</h2>
-                <p>Dinas Pendidikan berkomitmen mewujudkan pendidikan berkualitas, merata, dan inklusif untuk seluruh masyarakat.</p>
+                <span class="hero-badge">🎓 Dinas Pendidikan Kabupaten</span>
+                <h2>Membangun Generasi <span class="text-gradient">Cerdas</span> dan Berkarakter</h2>
+                <p>Berkomitmen mewujudkan pendidikan berkualitas, merata, dan inklusif untuk seluruh masyarakat demi masa depan yang lebih cerah.</p>
                 <div class="hero-buttons">
-                    <a href="#layanan" class="btn btn-primary">Layanan Kami</a>
-                    <a href="#kontak" class="btn btn-secondary">Hubungi Kami</a>
+                    <a href="#layanan" class="btn btn-primary">
+                        <span>Layanan Kami</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#kontak" class="btn btn-outline">Hubungi Kami</a>
                 </div>
             </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,50 C360,100 1080,0 1440,50 L1440,100 L0,100 Z" fill="#ffffff"/>
+            </svg>
         </div>
     </section>
 
@@ -69,18 +80,22 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
+                    <div class="stat-icon">🏫</div>
                     <span class="stat-number" data-target="250">0</span>
                     <span class="stat-label">Sekolah</span>
                 </div>
                 <div class="stat-item">
+                    <div class="stat-icon">👨‍🏫</div>
                     <span class="stat-number" data-target="5400">0</span>
                     <span class="stat-label">Guru & Tenaga Pendidik</span>
                 </div>
                 <div class="stat-item">
+                    <div class="stat-icon">👩‍🎓</div>
                     <span class="stat-number" data-target="85000">0</span>
                     <span class="stat-label">Siswa</span>
                 </div>
                 <div class="stat-item">
+                    <div class="stat-icon">📈</div>
                     <span class="stat-number" data-target="98">0</span>
                     <span class="stat-label">% Angka Partisipasi</span>
                 </div>
@@ -92,18 +107,23 @@
     <section class="profil section" id="profil">
         <div class="container">
             <div class="section-header">
-                <h2>Profil Dinas</h2>
-                <p>Mengenal lebih dekat Dinas Pendidikan</p>
+                <span class="section-badge">Tentang Kami</span>
+                <h2>Profil Dinas Pendidikan</h2>
+                <p>Mengenal lebih dekat visi, misi, dan tugas pokok kami</p>
             </div>
             <div class="profil-grid">
                 <div class="profil-card">
-                    <div class="profil-icon">🎯</div>
-                    <h3>Visi</h3>
+                    <div class="profil-card-header">
+                        <div class="profil-icon">🎯</div>
+                        <h3>Visi</h3>
+                    </div>
                     <p>Terwujudnya pendidikan yang berkualitas, berkeadilan, dan berdaya saing untuk mencerdaskan kehidupan bangsa.</p>
                 </div>
-                <div class="profil-card">
-                    <div class="profil-icon">🚀</div>
-                    <h3>Misi</h3>
+                <div class="profil-card featured">
+                    <div class="profil-card-header">
+                        <div class="profil-icon">🚀</div>
+                        <h3>Misi</h3>
+                    </div>
                     <ul>
                         <li>Meningkatkan akses dan pemerataan pendidikan</li>
                         <li>Meningkatkan mutu pendidikan</li>
@@ -112,8 +132,10 @@
                     </ul>
                 </div>
                 <div class="profil-card">
-                    <div class="profil-icon">📋</div>
-                    <h3>Tugas Pokok</h3>
+                    <div class="profil-card-header">
+                        <div class="profil-icon">📋</div>
+                        <h3>Tugas Pokok</h3>
+                    </div>
                     <p>Melaksanakan urusan pemerintahan di bidang pendidikan yang menjadi kewenangan daerah dan tugas pembantuan.</p>
                 </div>
             </div>
@@ -124,45 +146,58 @@
     <section class="layanan section" id="layanan">
         <div class="container">
             <div class="section-header">
+                <span class="section-badge">Layanan Publik</span>
                 <h2>Layanan Kami</h2>
-                <p>Berbagai layanan pendidikan untuk masyarakat</p>
+                <p>Berbagai layanan pendidikan untuk kemudahan masyarakat</p>
             </div>
             <div class="layanan-grid">
                 <div class="layanan-card">
-                    <div class="layanan-icon">🏫</div>
+                    <div class="layanan-icon-wrap">
+                        <span class="layanan-icon">🏫</span>
+                    </div>
                     <h3>PPDB Online</h3>
                     <p>Penerimaan Peserta Didik Baru secara daring yang transparan dan akuntabel.</p>
-                    <a href="#" class="layanan-link">Selengkapnya →</a>
+                    <a href="#" class="layanan-link">Selengkapnya <span>→</span></a>
                 </div>
                 <div class="layanan-card">
-                    <div class="layanan-icon">📝</div>
+                    <div class="layanan-icon-wrap">
+                        <span class="layanan-icon">📝</span>
+                    </div>
                     <h3>Legalisir Ijazah</h3>
                     <p>Layanan legalisir dokumen pendidikan secara cepat dan mudah.</p>
-                    <a href="#" class="layanan-link">Selengkapnya →</a>
+                    <a href="#" class="layanan-link">Selengkapnya <span>→</span></a>
                 </div>
                 <div class="layanan-card">
-                    <div class="layanan-icon">🎓</div>
+                    <div class="layanan-icon-wrap">
+                        <span class="layanan-icon">🎓</span>
+                    </div>
                     <h3>Beasiswa</h3>
                     <p>Program beasiswa untuk siswa berprestasi dan kurang mampu.</p>
-                    <a href="#" class="layanan-link">Selengkapnya →</a>
+                    <a href="#" class="layanan-link">Selengkapnya <span>→</span></a>
                 </div>
                 <div class="layanan-card">
-                    <div class="layanan-icon">📊</div>
+                    <div class="layanan-icon-wrap">
+                        <span class="layanan-icon">📊</span>
+                    </div>
                     <h3>Data Pendidikan</h3>
                     <p>Akses data dan statistik pendidikan daerah yang terbuka.</p>
-                    <a href="#" class="layanan-link">Selengkapnya →</a>
+                    <a href="#" class="layanan-link">Selengkapnya <span>→</span></a>
                 </div>
                 <div class="layanan-card">
-                    <div class="layanan-icon">👩‍🏫</div>
+                    <div class="layanan-icon-wrap">
+                        <span class="layanan-icon">👩‍🏫</span>
+                    </div>
                     <h3>Sertifikasi Guru</h3>
                     <p>Informasi dan layanan sertifikasi bagi tenaga pendidik.</p>
-                    <a href="#" class="layanan-link">Selengkapnya →</a>
+                    <a href="#" class="layanan-link">Selengkapnya <span>→</span></a>
                 </div>
                 <div class="layanan-card">
-                    <div class="layanan-icon">📞</div>
+                    <div class="layanan-icon-wrap">
+                        <span class="layanan-icon">📞</span>
+                    </div>
                     <h3>Pengaduan</h3>
                     <p>Sampaikan keluhan dan masukan terkait layanan pendidikan.</p>
-                    <a href="#" class="layanan-link">Selengkapnya →</a>
+                    <a href="#" class="layanan-link">Selengkapnya <span>→</span></a>
                 </div>
             </div>
         </div>
@@ -172,6 +207,7 @@
     <section class="berita section" id="berita">
         <div class="container">
             <div class="section-header">
+                <span class="section-badge">Terbaru</span>
                 <h2>Berita & Pengumuman</h2>
                 <p>Informasi terkini seputar dunia pendidikan</p>
             </div>
@@ -179,34 +215,37 @@
                 <article class="berita-card">
                     <div class="berita-image">
                         <div class="berita-placeholder">📰</div>
+                        <span class="berita-category">PPDB</span>
                     </div>
                     <div class="berita-content">
-                        <span class="berita-date">10 Juni 2026</span>
+                        <span class="berita-date">📅 10 Juni 2026</span>
                         <h3>Pembukaan PPDB Tahun Ajaran 2026/2027</h3>
                         <p>Pendaftaran peserta didik baru untuk semua jenjang pendidikan resmi dibuka mulai tanggal 15 Juni 2026.</p>
-                        <a href="#" class="berita-link">Baca selengkapnya</a>
+                        <a href="#" class="berita-link">Baca selengkapnya →</a>
                     </div>
                 </article>
                 <article class="berita-card">
                     <div class="berita-image">
                         <div class="berita-placeholder">🏆</div>
+                        <span class="berita-category">Prestasi</span>
                     </div>
                     <div class="berita-content">
-                        <span class="berita-date">5 Juni 2026</span>
+                        <span class="berita-date">📅 5 Juni 2026</span>
                         <h3>Prestasi Siswa di Olimpiade Sains Nasional</h3>
                         <p>Delegasi siswa berhasil meraih 3 medali emas dan 5 medali perak pada OSN 2026.</p>
-                        <a href="#" class="berita-link">Baca selengkapnya</a>
+                        <a href="#" class="berita-link">Baca selengkapnya →</a>
                     </div>
                 </article>
                 <article class="berita-card">
                     <div class="berita-image">
                         <div class="berita-placeholder">💻</div>
+                        <span class="berita-category">Program</span>
                     </div>
                     <div class="berita-content">
-                        <span class="berita-date">1 Juni 2026</span>
+                        <span class="berita-date">📅 1 Juni 2026</span>
                         <h3>Program Digitalisasi Sekolah Tahap II</h3>
                         <p>Sebanyak 50 sekolah tambahan akan menerima fasilitas teknologi pembelajaran digital.</p>
-                        <a href="#" class="berita-link">Baca selengkapnya</a>
+                        <a href="#" class="berita-link">Baca selengkapnya →</a>
                     </div>
                 </article>
             </div>
@@ -217,58 +256,68 @@
     <section class="kontak section" id="kontak">
         <div class="container">
             <div class="section-header">
+                <span class="section-badge">Kontak</span>
                 <h2>Hubungi Kami</h2>
-                <p>Kami siap melayani Anda</p>
+                <p>Kami siap melayani kebutuhan pendidikan Anda</p>
             </div>
             <div class="kontak-grid">
                 <div class="kontak-info">
-                    <div class="kontak-item">
-                        <span class="kontak-icon">📍</span>
-                        <div>
-                            <h4>Alamat</h4>
-                            <p>Jl. Pendidikan No. 1, Kota Pendidikan</p>
+                    <h3>Informasi Kontak</h3>
+                    <p class="kontak-desc">Silakan hubungi kami melalui informasi di bawah ini atau isi formulir di samping.</p>
+                    <div class="kontak-items">
+                        <div class="kontak-item">
+                            <span class="kontak-icon">📍</span>
+                            <div>
+                                <h4>Alamat</h4>
+                                <p>Jl. Pendidikan No. 1, Kota Pendidikan</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="kontak-item">
-                        <span class="kontak-icon">📞</span>
-                        <div>
-                            <h4>Telepon</h4>
-                            <p>(021) 1234-5678</p>
+                        <div class="kontak-item">
+                            <span class="kontak-icon">📞</span>
+                            <div>
+                                <h4>Telepon</h4>
+                                <p>(021) 1234-5678</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="kontak-item">
-                        <span class="kontak-icon">📧</span>
-                        <div>
-                            <h4>Email</h4>
-                            <p>info@disdik.go.id</p>
+                        <div class="kontak-item">
+                            <span class="kontak-icon">📧</span>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@disdik.go.id</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="kontak-item">
-                        <span class="kontak-icon">🕐</span>
-                        <div>
-                            <h4>Jam Operasional</h4>
-                            <p>Senin - Jumat: 08.00 - 16.00 WIB</p>
+                        <div class="kontak-item">
+                            <span class="kontak-icon">🕐</span>
+                            <div>
+                                <h4>Jam Operasional</h4>
+                                <p>Senin - Jumat: 08.00 - 16.00 WIB</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <form class="kontak-form" id="kontakForm">
-                    <div class="form-group">
-                        <label for="nama">Nama Lengkap</label>
-                        <input type="text" id="nama" name="nama" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="subjek">Subjek</label>
-                        <input type="text" id="subjek" name="subjek" required>
+                        <input type="text" id="subjek" name="subjek" placeholder="Subjek pesan" required>
                     </div>
                     <div class="form-group">
                         <label for="pesan">Pesan</label>
-                        <textarea id="pesan" name="pesan" rows="5" required></textarea>
+                        <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Kirim Pesan</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                    </button>
                 </form>
             </div>
         </div>
@@ -279,7 +328,10 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <h3>📚 Dinas Pendidikan</h3>
+                    <div class="footer-logo">
+                        <img src="assets/images/tut-wuri-handayani.png" alt="Logo" class="footer-logo-img">
+                        <h3>Dinas Pendidikan</h3>
+                    </div>
                     <p>Membangun generasi cerdas, berkarakter, dan berdaya saing melalui pendidikan berkualitas.</p>
                 </div>
                 <div class="footer-links">
