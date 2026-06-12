@@ -740,6 +740,12 @@ img {
     font-size: 1.6rem;
 }
 
+.layanan-icon-img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
 .layanan-card h3 {
     font-size: 1.05rem;
     color: var(--text);
